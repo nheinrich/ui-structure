@@ -1,0 +1,45 @@
+// button --------------------------------------------------------------------
+// button styling used throughout the site
+
+// example button mixin and usage
+
+// = button($size)
+//   $border-color: rgba(0, 0, 0, .4)
+//   +inline-block
+//   padding: 0
+//   color: #444  
+//   border: 0
+//   +background-image(linear-gradient(#fff, #c7c7c7))
+//   +box-shadow($border-color 0px 0px 0px 3px)
+//   +single-text-shadow(#fff, 0, 1px, 1px)
+//   @if $size == "normal"
+//     +border-radius(4px)
+//   @if $size == "large"
+//     +border-radius(8px)
+//   span
+//     display: block
+//     +myriad-pro
+//     letter-spacing: -.1px
+//     font-weight: 600
+//     text-transform: uppercase
+//     @if $size == "normal"
+//       padding: 4px 12px
+//       font-size: 14px
+//       line-height: 18px
+//     @if $size == "large"
+//       padding: 5px 16px
+//       font-size: 17px
+//       line-height: 21px
+//   &:hover
+//     text-decoration: none
+//     span
+//       color: #222
+// 
+// 
+// a.button.normal,
+// button.button.normal
+//   +button("normal")
+// 
+// a.button.large,
+// button.button.large
+//   +button("large")

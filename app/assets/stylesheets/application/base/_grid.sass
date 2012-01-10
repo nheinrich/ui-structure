@@ -1,0 +1,27 @@
+// grid ----------------------------------------------------------------------
+
+// these variables will populate the mixin below 
+// for setting column sizes on elements
+// usage: +column(4)
+
+$total_columns: 10
+$column: 76px
+$gutter: 20px
+
+
+// column mixin --------------------------------------------------------------
+
+// adding 'true' in for the $last property will give you no right margin
+// it is typically used or setting a width on the last column in a container
+
+=column($num:1, $last:false)
+  width: (($column * $num) + ($gutter * ($num - 1)))
+  margin-right: $gutter
+  box-sizing: border-box
+  @if $last
+    margin-right: 0
+    padding-right: 0
+  
+=layout_width
+  width: (($column * $total_columns) + ($gutter * ($total_columns - 1)))
+  box-sizing: border-box
